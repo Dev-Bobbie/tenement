@@ -20,7 +20,7 @@ class A_58_Spider(CrawlSpider):
     start_urls = ['https://sh.58.com/chuzu/']
 
     rules = (
-        Rule(LinkExtractor(restrict_css='.next'),follow=False),
+        Rule(LinkExtractor(restrict_css='.next'),follow=True),
         Rule(LinkExtractor(restrict_css='.des > h2'), callback='parse_item'),
     )
 
