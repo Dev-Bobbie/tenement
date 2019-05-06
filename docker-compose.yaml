@@ -1,0 +1,70 @@
+version: '3.1'
+services:
+    crawler:
+        build: ./crawler
+        image: tenement/crawler
+        container_name: crawler_58
+        networks:
+            - localhost
+        volumes:
+            - ./data:/tenement/data
+            - ./data/images:/tenement/data/images
+            - ./crawler:/tenement/crawler
+        working_dir: /tenement/crawler
+        depends_on:
+            - redis
+            - elastic
+        entrypoint: python main.py
+
+    elastic:
+        image: docker.elastic.co/elasticsearch/elasticsearch:6.5.0
+        container_name: elasticsearch
+        environment:
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        networks:
+            - localhost
+        ports:
+            - 9200:9200
+        volumes:
+            - ./data/elastic:/usr/share/elasticsearch/data
+            - ./data/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+
+    kibana:
+        image: docker.elastic.co/kibana/kibana:6.5.0
+        container_name: kibana
+        networks:
+            - localhost
+        ports:
+            - 5601:5601
+        environment:
+            - ELASTICSEARCH_URL=http://elastic:9200
+        depends_on:
+            - elastic
+
+    elastic_head:
+        image: alivv/elasticsearch-head
+        container_name: elastic_head
+        networks:
+            - localhost
+        ports:
+            - 9100:9100
+        depends_on:
+            - elastic
+
+    redis:
+        image: redis
+        container_name: redis
+        networks:
+            - localhost
+        ports:
+            - 6399:6379
+        volumes:
+            - ./data/redis:/data
+networks:
+    localhost:
+
