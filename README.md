@@ -257,4 +257,4 @@ networks:
 
 运行结果：
 
-![Snip20190506_3](https://github.com/Dev-Bobbie/tenement/blob/master/screenshot/Snip20190506_3.png))
+![Snip20190506_3](https://github.com/Dev-Bobbie/tenement/blob/master/screenshot/Snip20190506_3.png)
