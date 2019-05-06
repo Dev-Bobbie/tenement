@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac2a0ac5-8095-44e6-9a1c-29dd282ac59e" name="Default Changelist" comment="" />
+    <list default="true" id="ac2a0ac5-8095-44e6-9a1c-29dd282ac59e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docker-compose.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="245">
@@ -118,14 +120,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawler/tenement/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="320">
+                <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -189,12 +191,13 @@
         <option value="$PROJECT_DIR$/crawler/tenement/pipelines.py" />
         <option value="$PROJECT_DIR$/crawler/tenement/settings.py" />
         <option value="$PROJECT_DIR$/crawler/tenement/spiders/spider_58.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-177" />
-    <option name="y" value="169" />
+    <option name="x" value="-190" />
+    <option name="y" value="47" />
     <option name="width" value="1746" />
     <option name="height" value="977" />
   </component>
@@ -361,16 +364,15 @@
       <workItem from="1557069157212" duration="9446000" />
       <workItem from="1557079921959" duration="1907000" />
       <workItem from="1557081836772" duration="319000" />
-      <workItem from="1557106917427" duration="33979000" />
+      <workItem from="1557106917427" duration="34331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45779000" />
+    <option name="totallyTimeSpent" value="46131000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-177" y="169" width="1746" height="977" extended-state="0" />
-    <editor active="true" />
+    <frame x="-190" y="47" width="1746" height="977" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14143193" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -555,14 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -700,6 +694,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="28" column="17" lean-forward="true" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="320">
+            <caret line="256" lean-forward="true" selection-start-line="256" selection-end-line="256" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
