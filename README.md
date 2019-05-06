@@ -258,3 +258,7 @@ networks:
 运行结果：
 
 ![Snip20190506_3](https://github.com/Dev-Bobbie/tenement/blob/master/screenshot/Snip20190506_3.png)
+
+## 帮助
+
+详细说明请看本项目的 [Wiki 页面](https://github.com/Dev-Bobbie/tenement/wiki);
