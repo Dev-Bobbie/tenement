@@ -26,20 +26,23 @@ DEFAULT_REQUEST_HEADERS = {
 # }
 
 DOWNLOADER_MIDDLEWARES = {
-    'tenement.middlewares.RandomUserAgentMiddlware': 100,
-    # 'tenement.middlewares.ProxyMiddleware': 200,
-    'tenement.middlewares.DownloadRetryMiddleware': 300,
+    'tenement.middlewares.RandomUserAgentMiddlware': 543,
+    # 'tenement.middlewares.ProxyMiddleware': 544,
+    'tenement.middlewares.DownloadRetryMiddleware': 545,
+    'tenement.middlewares.FontReplaceMiddleware': 546,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
 }
 
 ITEM_PIPELINES = {
-    'tenement.pipelines.TenementPipeline': 100,
-    'tenement.pipelines.DuplicatesPipeline': 200,
-    'scrapy.pipelines.images.ImagesPipeline': 300,
-    'tenement.pipelines.ESPipeline': 400,
+    'tenement.pipelines.TenementPipeline': 300,
+    'tenement.pipelines.DuplicatesPipeline': 301,
+    'scrapy.pipelines.images.ImagesPipeline': 302,
+    'tenement.pipelines.ESPipeline': 303,
 }
 
+
+IMAGES_URLS_FIELD = "image_urls"
 project_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 IMAGES_STORE =  os.path.join(project_dir, 'data/images')
 

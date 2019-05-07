@@ -1,14 +1,9 @@
 # -*- coding: utf-8 -*-
-import base64
-import io
-import re
 import time
 
-from fontTools.ttLib import TTFont
 from scrapy.linkextractors import LinkExtractor
 from scrapy.mail import MailSender
 from scrapy.spiders import CrawlSpider, Rule
-from scrapy import Selector
 
 from tenement.items import TenementItemLoader, spider_58Item
 
@@ -28,26 +23,6 @@ class A_58_Spider(CrawlSpider):
         if response.status not in [200,201]:
             self.crawler.stats.inc_value("Failed_Reqeust")
 
-        base64_str = Selector(text=response.text).re(r"base64,(.*?)'\)")
-        if len(base64_str) > 0:
-            b = base64.b64decode(base64_str[0])
-            font = TTFont(io.BytesIO(b))
-            bestcmap = font['cmap'].getBestCmap()
-            newmap = dict()
-            for key in bestcmap.keys():
-                value = int(re.search(r'(\d+)', bestcmap[key]).group(1)) - 1
-                key = hex(key)
-                newmap[key] = value
-            # 把页面上自定义字体替换成正常字体
-            response_ = response.text
-            for key, value in newmap.items():
-                key_ = key.replace('0x', '&#x') + ';'
-                if key_ in response_:
-                    response_ = response_.replace(key_, str(value))
-                    response.__dict__.update({
-                        "_cached_ubody": response_,
-                        "_body":bytes(response_,encoding='utf-8')
-                    })
         try:
             # 使用Crawl api记录文章详情页请求成功的Request
             self.crawler.stats.inc_value("Info_Detail_Success_Reqeust")
