@@ -16,7 +16,7 @@ class A_58_Spider(CrawlSpider):
 
     rules = (
         Rule(LinkExtractor(restrict_css='.next'),follow=True),
-        Rule(LinkExtractor(restrict_css='.des > h2'), callback='parse_item'),
+        Rule(LinkExtractor(restrict_css='.des > h2'),follow=False,callback='parse_item'),
     )
 
     def parse_item(self, response):
